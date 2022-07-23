@@ -50,8 +50,8 @@ def get_chromedriver():
   def is_exe(fpath):
     return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
 
-  if is_exe (curr_dir + "\chromedriver.exe"):
-    return curr_dir + "\chromedriver.exe"
+  if is_exe (os.path.join(curr_dir, "chromedriver.exe")):
+    return os.path.join(curr_dir, "chromedriver.exe")
   for path in os.environ["PATH"].split(os.pathsep):
     exe_file = os.path.join(path, "chromedriver.exe")
     if is_exe(exe_file):
@@ -71,7 +71,7 @@ def dlfiles(File, url):
   chrome_options.add_argument('--headless')
   chrome_options.add_argument('--no-sandbox')
   chrome_options.add_argument('--disable-dev-shm-usage')
-  browser = webdriver.Chrome('chromedriver',options=chrome_options)
+  browser = webdriver.Chrome(get_chromedriver() ,options=chrome_options)
   try:
     t1 = time.time()
     timeout = 100

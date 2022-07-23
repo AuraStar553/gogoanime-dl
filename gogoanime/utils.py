@@ -56,7 +56,7 @@ def get_embed_url(url):
     link = (BeautifulSoup(requests.get(url).text, 'html.parser').find_all("div",attrs={"class":"anime_muti_link"})[0]).find_all("a")
     for x in link:
       lin = x.get("data-video")
-      if lin.starswith("https://fembed-hd.com"):
+      if lin.startswith("https://fembed-hd.com"):
         return lin
       else:
         pass

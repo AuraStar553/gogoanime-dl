@@ -33,9 +33,11 @@ class GoGo:
       return print("No Results Found")
     ques = "{}. {}"
     q = "\n".join(ques.format(res.index(x), x["name"]) for x in res)
-    ques = f"Following are search results for {query} Please Choose and send the number of your choice: \n\n{q}\nSend cancel to cancel the process"
+    ques = f"Following are search results for {query} Please Choose and send the number of your choice: \n\n{q}\nSend cancel to cancel the process\n"
     option = input(ques)
-    if not isinstance(option, int):
+    try:
+      option= int(option)
+    except ValueError:
       return print("Process Cancelled")
     try:
       choice = res[option]
@@ -52,8 +54,11 @@ class GoGo:
     for ep in episodes:
       ques += q.format(episodes.index(ep), ep['num'])
       ques += "\n"
+    ques += "\n"
     epi = input(ques)
-    if not isinstance(epi, int):
+    try:
+      epi = int(epi)
+    except ValueError:
       return print("Process Cancelled")
     try:
       epi = episodes[epi]
