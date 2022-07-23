@@ -9,7 +9,7 @@ Copyright (C) 2022
 import requests
 from bs4 import BeautifulSoup
 
-def get_episodes_list(url): 
+def get_episode_list(url): 
   try:
     soup = (BeautifulSoup(requests.get(url).text, 'html.parser'))
     pid = soup.find_all("input",attrs={"class":"movie_id"})[0].get("value")

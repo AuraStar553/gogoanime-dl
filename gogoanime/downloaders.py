@@ -85,8 +85,7 @@ def dlfiles(File, url):
     )
     t2 = time.time() - t1
     for x in browser.find_elements(By.CLASS_NAME, "clickdownload"):
-      option = input(f"Do You Want To Download This Anime in {x.get_property('text')}p Quality?
-  Type y/n")
+      option = input(f"Do You Want To Download This Anime in {x.get_property('text')}p Quality?\nType y/n")
       if option.lower()[0] == "y":
         b = requests.get(x.get_property("href"))
         open(f'{File}-{x.get_property("text")}p.mp4',"wb").write(b.content)

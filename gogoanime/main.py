@@ -7,7 +7,7 @@ Copyright (C) 2022
 
 
 
-from utils import get_episode_list, search_anime, get_embed_url
+from .utils import get_episode_list, search_anime, get_embed_url
 import os
 from .downloaders import get_readable_time, get_chromedriver, dlfiles
 
