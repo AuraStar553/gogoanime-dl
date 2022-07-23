@@ -1,6 +1,6 @@
 
 # Gogoanime-DL
-[![PyPI](https://img.shields.io/pypi/v/gogoanime-dl.svg)](https://pypi.python.org/pypi/gogoanime-dl)
+[![PyPI](https://img.shields.io/pypi/gogoanime-dl.svg)](https://pypi.python.org/pypi/gogoanime-dl)
 ![Python Versions](https://img.shields.io/pypi/pyversions/gogoanime-dl.svg)
 
 ![License](https://img.shields.io/github/license/AuraMoon55/gogoanime-dl.svg)
