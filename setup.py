@@ -52,6 +52,6 @@ setup(
         "Topic :: Software Development :: Libraries",
         "Topic :: Software Development :: Libraries :: Python Modules"
     ],
-    zip_safe=false,
+    zip_safe=False,
     python_requires="~=3.7"
 )
