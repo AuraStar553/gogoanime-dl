@@ -33,7 +33,7 @@ setup(
     license='MIT',
 
     packages=['gogoanime'],
-    install_requires=['requests', 'bs4', 'selenium'],
+    install_requires=['requests', 'bs4', 'selenium~=4.3.0'],
 
     classifiers=[
         'License :: OSI Approved :: MIT License',
