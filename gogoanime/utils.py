@@ -57,7 +57,7 @@ def get_embed_url(url):
     for x in link:
       lin = x.get("data-video")
       if lin.startswith("https://fembed-hd.com"):
-        return lin
+        return lin.replace("https://fembed-hd.com/v/","https://fembed-hd.com/f/")
       else:
         pass
     return None
