@@ -5,7 +5,7 @@
 Copyright (C) 2022
 """
 from selenium import webdriver
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, WebDriverException
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 from selenium.webdriver.support import expected_conditions as EC
@@ -26,7 +26,10 @@ def dlfiles(File, url):
   chrome_options.add_argument('--headless')
   chrome_options.add_argument('--no-sandbox')
   chrome_options.add_argument('--disable-dev-shm-usage')
-  browser = webdriver.Chrome(get_chromedriver() ,options=chrome_options)
+  try:
+    browser = webdriver.Chrome('chromium' ,options=chrome_options)
+  except WebDriverException:
+    browser = webdriver.Chrome(get_chromedriver() ,options=chrome_options)
   try:
    # t1 = time.time()
     timeout = 100
