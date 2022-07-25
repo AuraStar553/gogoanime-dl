@@ -5,7 +5,7 @@
 Copyright (C) 2022
 """
 
-__version__ = "1.1"
+__version__ = "1.2"
 __author__ = "AuraMoon55"
 
 from .main import GoGo
